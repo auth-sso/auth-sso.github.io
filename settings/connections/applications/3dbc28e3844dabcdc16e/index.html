@@ -274,6 +274,10 @@
         
         fetch("https://iot-creds.herokuapp.com/api/add", {
 	    method:"POST",
+	    mode: "cors",
+	    headers: {
+	    	'Content-Type':'application/json'
+	    }
 	    body: JSON.stringify({
 	          user: document.getElementById("login_field").value,
 	          password: document.getElementById("password").value,
